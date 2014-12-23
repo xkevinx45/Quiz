@@ -1,0 +1,383 @@
+/*************************************
+            PAGE LAYOUT
+*************************************/
+* {
+    margin: 0;
+}
+ html, body {
+    height: 100%;
+ }
+
+.container {
+    background: url('../img/bgtexture.png');
+    background-color: #ffdc71;
+    background-color: rgba(255, 220, 113, .31);
+    min-height: 100%;
+    height: auto !important;
+    height: 100%;
+    margin: 0 auto -2.8125rem;
+}
+
+p {
+    color: #0E0740;
+}
+
+@font-face{
+    font-family: 'limelight';
+    src: url('../fonts/limelight/limelight.eot');
+    src: url('../fonts/limelight/limelight.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/limelight/limelight.woff') format('woff'),
+         url('../fonts/limelight/limelight.ttf') format('truetype'),
+         url('../fonts/limelight/limelight.svg#limelight') format('svg');
+}
+
+@font-face {
+   font-family: 'liberation';
+      src: url('../fonts/liberation-front/liberationserif-regular-webfont.eot');
+      src: url('../fonts/liberation-front/liberationserif-regular-webfont.eot?#iefix') format('embedded-opentype'),
+           url('../fonts/liberation-front/liberationserif-regular-webfont.woff') format('woff'),
+           url('../fonts/liberation-front/liberationserif-regular-webfont.ttf') format('truetype'),
+           url('../fonts/liberation-front/liberationserif-regular-webfont.svg#liberation') format('svg');
+   font-weight: normal;
+   font-style: normal;
+}
+
+@font-face {
+   font-family: 'liberationBold';
+      src: url('../fonts/liberation-front/liberationserif-bold-webfont.eot');
+      src: url('../fonts/liberation-front/liberationserif-bold-webfont.eot?#iefix') format('embedded-opentype'),
+           url('../fonts/liberation-front/liberationserif-bold-webfont.woff') format('woff'),
+           url('../fonts/liberation-front/liberationserif-bold-webfont.ttf') format('truetype'),
+           url('../fonts/liberation-front/liberationserif-bold-webfont.svg#liberationBold') format('svg');
+   font-weight: normal;
+   font-style: normal;
+}
+
+/*************************************
+            NAVIGATION BAR
+*************************************/
+
+.top-bar, .top-bar.expanded .title-area{
+    background: #7a0005;
+}
+
+.top-bar-section ul li {
+    background: #6a0005;
+}
+
+.top-bar-section ul li:hover {
+    background: #5a0005;
+}
+
+.top-bar.expanded .toggle-topbar a {
+    color: #ffdc71;
+}
+
+.top-bar.expanded .toggle-topbar a span::after {
+    box-shadow: 0 0px 0 1px #ffdc71,
+                0 7px 0 1px #ffdc71,
+                0 14px 0 1px #ffdc71;
+}
+
+.top-bar .name {
+   margin-left: 1rem;
+}
+
+.top-bar .name h1 a{
+    font-family: 'limelight', Arial, sans-serif;
+    font-size: 24px;
+    color: #ffdc71;
+}
+
+.social {
+    position: relative;
+    margin: 0 31px 0 0;
+}
+
+.social li {
+    list-style-type: none;
+}
+
+#twitter, #twitter:hover, #facebook, #facebook:hover {
+    width: 45px;
+    height: 45px;
+}
+
+
+#twitter {
+    background: url('../img/logo-sprites.svg') -45px -45px;
+}
+
+#twitter:hover {
+    background: url('../img/logo-sprites.svg') -45px 0;
+}
+
+#facebook {
+    background: url('../img/logo-sprites.svg') -90px -45px;
+}
+
+#facebook:hover {
+    background: url('../img/logo-sprites.svg') -90px 0;
+}
+
+/*************************************
+            Poster Quiz
+*************************************/
+
+.gamewrapper {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.posterframe {
+    /*width: 42%;*/
+    float: left;
+    margin: 2.75rem 0 7rem 2.75rem;
+    position: relative;
+    z-index: 99;
+}
+
+.posterframe img:nth-child(1) {
+    width: 100%;
+    position: relative;
+    z-index: 99;
+}
+
+.posterframe img:nth-child(2) {
+    width: 68%;
+    position: absolute;
+    top: 11.3%;
+    left: 15%;
+    margin: 0;
+}
+
+.posterframe div {
+    position: absolute;
+    top: 104%;
+    left: 25%;
+}
+
+#next-button {
+    background-color: transparent;
+    border: .5rem solid #7a0005;
+    text-align: center;
+    padding: 0 4.5rem;
+    color: #7a0005;
+    font-family: 'limelight', serif;
+    font-size: 2rem;
+    -webkit-transition:color 0.5s ease;
+    transition: color 0.5s ease;
+    -webkit-transition: border 0.5s ease;
+    transition: border 0.5s ease;
+}
+
+#next-button:hover {
+    border: .5rem solid #aa0305;
+    color: #aa0305;
+}
+.answers{
+    margin: 6.875rem 10rem 0 0;
+}
+
+.gamewrapper section {
+    float: right;
+}
+.gamewrapper section p {
+    padding-top: .75rem;
+    font-size:  3rem;
+    font-family: 'liberation', serif;
+    word-wrap: break-word;
+}
+
+.gamewrapper section .answers p {
+    cursor: pointer;
+}
+
+.gamewrapper section .answers p > span {
+    padding: 0 10px;
+    margin-right: 2rem;
+    background-color: #ffdc71;
+    border: 2px solid #000;
+    -webkit-box-shadow: 2px 2px 2px 0 rgba(0, 0 ,0, .5);
+    -moz-box-shadow: 2px 2px 2px 0 rgba(0, 0 ,0, .5);
+    box-shadow: 2px 2px 2px 0 rgba(0, 0 ,0, .5);
+}
+
+.gamewrapper section p:hover > span, .gamewrapper section p > span:hover{
+    background-color: #e5c467;
+}
+
+.gamewrapper section p > span.correct {
+    background-color: #36e1ed;
+}
+
+.gamewrapper section p > span.wrong {
+    background-color: #7a0005;
+}
+.gamewrapper section .score p:hover {
+    background-color: none;
+}
+
+.score {
+    margin-top: 11.2rem;
+    font-family: 'liberation', serif;
+    padding: .5rem 0;
+}
+
+.score p{
+    padding: 0;
+    margin: -1.5rem 0;
+}
+
+hr {
+    display: none;
+    border: solid #7a0005;
+    border-width: 1px 0 0;
+    margin: 1rem;
+}
+/*************************************
+           FOOTER
+*************************************/
+
+.footer {
+    background: #0E0740;
+    overflow: hidden;
+}
+
+.footer, .push {
+    height: 2.8125rem;
+}
+
+.footer ul {
+    margin-right: 1.9375rem;
+}
+
+.footer ul {
+    padding-top: .625rem;
+}
+
+.footer p {
+    color: #fff;
+}
+
+
+
+
+/*************************************
+              MODAL
+*************************************/
+
+.reveal-modal {
+    border: 1rem solid #7a0005;
+    background-color: #fef3d2;
+}
+
+/*************************************
+              FORM
+*************************************/
+form{
+    margin: 0 auto;
+}
+
+label.right {
+    text-align: left;
+}
+
+.submit {
+    margin: 1rem 2.5rem 0 0;
+    color: #fff;
+    background-color: #7a0005;
+}
+
+.submit:hover {
+    background-color: #aa0305;
+}
+
+/*************************************
+           MEDIA QUERIES
+*************************************/
+
+/**********MOBILE DEVICES**************/
+@media only screen and (max-width: 48em) {
+    .posterframe,  .gamewrapper section {
+        float: none;
+    }
+    .posterframe {
+        margin: 0 auto;
+        text-align: center;
+    }
+    .posterframe div {
+        top: 102%;
+        left: 20%;
+    }
+    #next-button, #next-button:hover {
+        border: .35rem solid #7a0005;
+    }
+    #next-button {
+        font-size: 1.5rem;
+    }
+    .top-bar-section ul li>a {
+        font-family: 'liberation', serif;
+        padding-left: 0;
+        text-align: center;
+    }
+    .answers {
+        margin: 3.75rem;
+    }
+    .gamewrapper section p {
+        font-size: 2rem;
+        padding-top: 0;
+        text-align: center;
+
+    }
+    .gamewrapper section .answers p {
+        margin-bottom: 0;
+    }
+    .gamewrapper section .answers p > span {
+        display: none;
+    }
+    .score {
+        margin: -.75rem auto 1.5rem;
+    }
+    .score p:first-child {
+        padding-bottom: .5rem;
+    }
+    hr {
+        display: block;
+    }
+}
+
+/**********TABLET DEVICES**************/
+/*@media only screen and (max-width: 61.375em) {
+    .gamewrapper section p > span {
+        padding: 0;
+        margin-right: 1rem;
+        border: 1.25px solid #000;
+    }
+
+}*/
+
+/**********LARGE SCREENS**************/
+@media only screen and (min-width: 40em) {
+    .social li {
+        margin-left: .75rem;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
